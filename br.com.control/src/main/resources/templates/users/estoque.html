@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+    <!--CSS Imports-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="/static/icon/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.mCustomScrollbar.css">
+
+    <style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    }
+    th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    }
+    th {
+    background-color: #f2f2f2;
+    }
+    </style>
+</head>
+
+<body>
+
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <div th:replace="~{views/navbar :: navbar}"></div>
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <div class="page-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-header formulario">
+                                                    <h5>Estoque</h5>
+                                                </div>
+                                                <div class="card-block">
+                                                    <form th:action="@{/estoque}" method="post">
+                                                        <div class="input-group mb-3">
+                                                            <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                                                            <select class="form-select" id="inputGroupSelect01">
+                                                                <option selected>Choose...</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select" id="inputGroupSelect02">
+                                                                <option selected disabled>Equipamento:</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="input-group mb-3">
+                                                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                                                            <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                                                <option selected>Choose...</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="input-group">
+                                                            <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                                                <option selected>Choose...</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <table>
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Quantidade total</th>
+                                                        <th>Data Entrada</th>
+                                                        <th>Quantidade entrada</th>
+                                                        <th>Data Saída</th>
+                                                        <th>Quantidade Saída</th>
+                                                        <th>Pessoa </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>João</td>
+                                                        <td>30</td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maria</td>
+                                                        <td>28</td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="styleSelector">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Javascript imports-->
+<script type="text/javascript" src="/static/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui/jquery-ui.min.js "></script>
+<script type="text/javascript" src="/static/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="/static/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<script src="/static/pages/waves/js/waves.min.js"></script>
+<script type="text/javascript" src="/static/js/SmoothScroll.js"></script>
+<script src="/static/js/pcoded.min.js"></script>
+<script src="/static/js/vertical-layout.min.js "></script>
+<script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+<script type="text/javascript" src="/static/js/cadastro-pessoa.js"></script>
+</body>
+
+</html>

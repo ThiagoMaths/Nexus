@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+    <!--CSS Imports-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="/static/icon/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <div th:replace="~{views/navbar :: navbar}"></div>
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <div class="page-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">Entrada</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="mb-6">
+                                                                <label for="test" class="form-label">Tipo de
+                                                                    material</label>
+                                                                <select class="custom-select" id="test"
+                                                                        aria-label="Default select example">
+                                                                    <option selected>Open this select menu</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="mb-6">
+                                                                <label for="test1" class="form-label">Reagente</label>
+                                                                <select class="custom-select" id="test1"
+                                                                        aria-label="Default select example">
+                                                                    <option selected>Open this select menu</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="styleSelector">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Javascript imports-->
+<script type="text/javascript" src="/static/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui/jquery-ui.min.js "></script>
+<script type="text/javascript" src="/static/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="/static/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<script src="/static/pages/waves/js/waves.min.js"></script>
+<script type="text/javascript" src="/static/js/SmoothScroll.js"></script>
+<script src="/static/js/pcoded.min.js"></script>
+<script src="/static/js/vertical-layout.min.js "></script>
+<script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+<script type="text/javascript" src="/static/js/entrada.js"></script>
+</body>
+
+</html>

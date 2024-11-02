@@ -1,0 +1,21 @@
+
+body {
+    overflow-y: hidden;
+}
+
+.formulario {
+    position: fixed;
+    top: 90px;
+    background: white;
+    padding: 30px;
+    width: 70%;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Ajuste o espaço entre os campos */
+}
+
+.form-label {
+    display: block; /* Garante que o label fique acima do select */
+    margin-bottom: 5px; /* Espaço entre o label e o select */
+}

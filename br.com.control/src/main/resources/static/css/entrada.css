@@ -1,0 +1,19 @@
+body {
+    overflow-y: hidden;
+}
+
+.formulario {
+    position: fixed;
+    top: 90px;
+    background: white;
+    padding: 30px;
+    width: 70%;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+    <!--CSS Imports-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="/static/icon/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/cadastro-pessoa.css">
+
+</head>
+
+<body>
+
+
+
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <div th:replace="~{views/navbar :: navbar}"></div>
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <div class="page-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div th:if="${msg}" class="alert">
+                                                <p th:text="${msg}"></p>
+                                            </div>
+                                            <div class="card">
+                                                    <h5>Cadastro de Funcionário</h5>
+                                                <div class="card-block formulario">
+                                                    <form class="form-material" id="formPessoa" action="/salvarpessoa" method="post"
+                                                          th:object="${pessoaObj}">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default">
+                                                                    <input type="text" id="nome" class="form-control"
+                                                                           th:field="*{nome}" required>
+
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label" for="nome">Nome</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default">
+                                                                    <input type="text" id="sobrenome"
+                                                                           class="form-control"
+                                                                           th:field="*{sobrenome}" required>
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label"
+                                                                           for="sobrenome">Sobrenome</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default form-static-label">
+                                                                    <input type="date" id="dataNascimento"
+                                                                           class="form-control"
+                                                                           th:field="*{dataNascimento}" required>
+
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label" for="dataNascimento">
+                                                                        Data de Nascimento</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default">
+                                                                    <input type="text" id="cpf" class="form-control"
+                                                                           th:field="*{cpf}" required>
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label" for="cpf">CPF</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default">
+                                                                    <input type="text" id="telefone"
+                                                                           class="form-control"
+                                                                           th:field="*{telefone}" required>
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label"
+                                                                           for="telefone">Telefone</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default">
+                                                                    <input type="email" id="email" class="form-control"
+                                                                           th:field="*{email}" required>
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label" for="email">Email</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="sexo">Sexo</label>
+                                                                    <select class="custom-select" id="sexo" th:field="*{sexo}" required>
+                                                                        <option value="" disabled selected>
+                                                                            --Selecione--
+                                                                        </option>
+                                                                        <option value="MASCULINO">Masculino</option>
+                                                                        <option value="FEMININO">Feminino</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="estadoCivil">
+                                                                        Estado Civil</label>
+                                                                    <select class="custom-select" id="estadoCivil"
+                                                                            th:field="*{estadoCivil}" required>
+
+                                                                        <option value="" disabled selected>--Selecione--
+                                                                        </option>
+                                                                        <option value="SOLTEIRO">Solteiro(a)</option>
+                                                                        <option value="CASADO">Casado(a)</option>
+                                                                        <option value="DIVORCIADO">Divorciado(a)
+                                                                        </option>
+                                                                        <option value="VIUVO">Viúvo(a)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="checked">
+                                                                        Possui conselho?</label>
+                                                                    <select class="custom-select" id="checked"  th:field="*{ativo}">
+                                                                        <option value="" disabled selected>
+                                                                            --Selecione--
+                                                                        </option>
+                                                                        <option value="true">Sim</option>
+                                                                        <option value="false">Não</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="conselhos" th:field="*{conselho}">
+                                                                        Se sim, Qual?</label>
+                                                                    <select class="custom-select" id="conselhos">
+                                                                        <option value="" disabled selected>
+                                                                            --Selecione--</option>
+                                                                        <option value="CRBIO">CRBIO</option>
+                                                                        <option value="CRBM">CRBM</option>
+                                                                        <option value="CRF">CRF</option>
+                                                                        <option value="OUTROS">Outros</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <br/>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group form-default">
+                                                                    <input type="text" id="matriculaConselho" class="form-control"
+                                                                           th:field="*{numeroConselho}" required>
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label" for="matriculaConselho">Matrícula do Conselho</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group form-default form-static-label">
+                                                                    <input type="date" id="dataExpedicao" class="form-control"
+                                                                           th:field="*{dataExpedicao}" required>
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label" for="dataExpedicao">Data da Expedição</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div th:replace="~{users/estados :: estados}"></div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="card-block">
+                                                                    <input class="btn btn-primary" type="submit"
+                                                                           value="Salvar">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="styleSelector">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Javascript imports-->
+<script type="text/javascript" src="/static/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui/jquery-ui.min.js "></script>
+<script type="text/javascript" src="/static/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="/static/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<script src="/static/pages/waves/js/waves.min.js"></script>
+<script type="text/javascript" src="/static/js/SmoothScroll.js"></script>
+<script src="/static/js/pcoded.min.js"></script>
+<script src="/static/js/vertical-layout.min.js "></script>
+<script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+<script type="text/javascript" src="/static/js/cadastro-pessoa.js"></script>
+</body>
+
+</html>
